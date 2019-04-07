@@ -1,0 +1,101 @@
+html {
+    background-color: black;
+    margin: 0;
+}
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+#play {
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.notes {
+    display: flex;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    flex-direction: row;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    color: aliceblue;
+    margin-left: 5px;
+}
+
+#play:active {
+    background-color: blue;
+}
+
+#play:focus {
+    outline:0;
+}
+
+.musicbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.check {
+    -webkit-appearance: none;
+	background-color: white;
+    padding: 20px;
+    margin: .5px;
+	display: inline-block;
+	position: relative;
+}
+
+.check:focus {
+    outline:0;
+}
+
+.c-note:checked {
+	background-color:red;
+	color:black;
+}
+
+.d-note:checked {
+	background-color: orange;
+	color:black;
+}
+
+.e-note:checked {
+	background-color:yellow;
+	color:black;
+}
+
+.f-note:checked {
+	background-color:green;
+	color:black;
+}
+
+.g-note:checked {
+	background-color: blue;
+	color:black;
+}
+
+.a-note:checked {
+	background-color:indigo;
+	color:black;
+}
+
+.b-note:checked {
+	background-color:violet;
+	color:black;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

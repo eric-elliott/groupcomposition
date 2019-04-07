@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>piano editor</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+    </head>
+    <body onload="initializeStaff()">
+    <div class="topbar">
+    <button id="play" onclick="playStaff()">
+        play
+    </button>
+    <p>~an open composition~</p>
+    </div>
+    <div class="musicbox">
+    <!-- <div class="notes">
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+        <div>G</div>
+        <div>A</div>
+        <div>B</div>
+    </div> -->
+    <div class="col" id="col0">
+        <input type="checkbox" class="check c-note"> 
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col1">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col2">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+        <div class="col" id="col3">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col4">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col5">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col6">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col7">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col8">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col9">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+        <div class="col" id="col10">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col11">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col12">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col13">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+        <div class="col" id="col14">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col15">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col16">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+        <div class="col" id="col17">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col18">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col19">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col20">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col21">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col22">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col23">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+        <div class="col" id="col24">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col25">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col26">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    <div class="col" id="col27">
+        <input type="checkbox" class="check c-note">
+        <input type="checkbox" class="check d-note">
+        <input type="checkbox" class="check e-note">
+        <input type="checkbox" class="check f-note">
+        <input type="checkbox" class="check g-note">
+        <input type="checkbox" class="check a-note">
+        <input type="checkbox" class="check b-note">
+    </div>
+    </div>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB3MYQm8OcLinZx_MV3S7zlPPQnk7CUIEo",
+            authDomain: "a-group-composition.firebaseapp.com",
+            databaseURL: "https://a-group-composition.firebaseio.com",
+            projectId: "a-group-composition",
+            storageBucket: "a-group-composition.appspot.com",
+            messagingSenderId: "320050933653"
+        };
+    firebase.initializeApp(config);
+    </script>
+    <script src="./script.js"></script>
+</html>

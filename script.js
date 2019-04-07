@@ -1,9 +1,5 @@
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
-
 function initializeStaff() {
-    console.log("test");
+    var url = "https://docs.google.com/spreadsheets/d/15_gfkqq05ZkQNRUkmPBPqZar8QF-Zxi44gfA3q4euDc/edit?usp=sharing"
 }
 
 var i = 0;

@@ -1,6 +1,11 @@
+const port = process.env.PORT || 8000;
+
+server.listen(port, () => {
+    console.log("App is running on port " + port);
+});
+
 function initializeStaff() {
-    var database = firebase.database();
-    console.log(database);
+    console.log("test");
 }
 
 var i = 0;

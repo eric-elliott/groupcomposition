@@ -1,0 +1,11 @@
+{
+  "name": "groupcomposition",
+  "version": "1.0.0",
+  "description": "a web application for group composition",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
